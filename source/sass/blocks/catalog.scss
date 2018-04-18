@@ -1,0 +1,51 @@
+.catalog {
+  padding-top: 30px;
+}
+
+.catalog__list {
+  @include ul-reset;
+}
+
+.catalog__item {
+  margin-bottom: 30px;
+}
+
+.catalog__wrapper {
+  padding: 29px;
+  border: 1px solid $border-color;
+}
+
+.catalog__description {
+  border-bottom: 1px solid $border-color;
+}
+
+.catalog__title {
+  margin: 0;
+  margin-bottom: 4px;
+  font-size: 17px;
+  font-weight: 700;
+  color: $title-color;
+}
+
+.catalog__details {
+  margin: 0;
+  margin-bottom: 17px;
+  line-height: 30px;
+}
+
+.catalog__add {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.catalog__price {
+  font-size: 15px;
+  font-weight: 700;
+  color: $title-color;
+}
+
+.catalog__basket {
+  width: 20px;
+  height: 19px;
+}

@@ -1,0 +1,11 @@
+.social__list {
+  @include ul-reset;
+  padding-top: 25px;
+  padding-bottom: 27px;
+  border-bottom: 1px solid $border-color;
+}
+
+.social__link {
+  position: relative;
+  display: block;
+}

@@ -1,0 +1,16 @@
+@mixin ul-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin pseudo-element {
+  content: "";
+  position: absolute;
+}
+
+@mixin fieldset-reset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
