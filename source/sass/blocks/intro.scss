@@ -1,0 +1,23 @@
+.intro {
+  background-color: $bg-color;
+  padding-top: 75px;
+  padding-left: 30px;
+  padding-right: 30px;
+  min-height: 177px;
+
+  &--catalog {
+    color: $title-color;
+  }
+
+  &--order {
+    color: #231f20;
+  }
+}
+
+.intro__title {
+  margin: 0;
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: 700;
+  text-align: center;
+}

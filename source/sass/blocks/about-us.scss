@@ -1,0 +1,26 @@
+.about-us {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.about-us__title {
+  margin-bottom: 30px;
+}
+
+.about-us__advantages-list {
+  @include ul-reset;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 700;
+  color: $title-color;
+}
+
+.about-us__advantage-item {
+  position: relative;
+  margin-bottom: 30px;
+  padding-top: 50px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

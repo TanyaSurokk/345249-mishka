@@ -1,0 +1,13 @@
+.button {
+  display: block;
+  width: 100%;
+  padding: 16px 20px;
+  border: 2px solid $button-border-color;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  color: $text-color;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: $button-bg-color;
+}
