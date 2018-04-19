@@ -76,13 +76,14 @@
 
   &--text {
     display: block;
+    margin-bottom: 10px;
   }
 }
 
 .order-form__input {
   &--text {
     width: 100%;
-    padding-top: 20px;
+    padding-top: 10px;
     padding-bottom: 10px;
     border: 0;
     border-bottom: 2px solid $form-border-color;
@@ -99,6 +100,12 @@
     border: 2px solid $form-border-color;
     font-size: 17px;
     line-height: 20px;
+    resize: none;
+  }
+
+  &--text::placeholder,
+  &--extra::placeholder {
+    color: rgba(68, 68, 68, 0.3);
   }
 }
 
