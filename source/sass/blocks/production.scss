@@ -1,3 +1,7 @@
+.production {
+  margin-bottom: 58px;
+}
+
 .production__wrapper {
   padding-top: 25px;
   padding-bottom: 33px;
@@ -5,14 +9,26 @@
 }
 
 .production__title {
+  position: relative;
   margin: 0;
   display: block;
-  padding-left: 91px;
-  padding-right: 43px;
-  padding-bottom: 22px;
+  padding-left: 56px;
+  padding-right: 42px;
+  margin-bottom: 22px;
+  margin-left: 34px;
   font-size: 17px;
   font-weight: 700;
   color: $title-color;
+
+  &::before {
+    @include pseudo-element;
+    left: 0;
+    top: 5px;
+    width: 32px;
+    height: 32px;
+    background-image: url("../img/icon-video.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 .production__text {
@@ -29,4 +45,96 @@
 .production__order {
   font-size: 17px;
   line-height: 17px;
+}
+
+@media (min-width: $tablet-width) {
+  .production {
+    margin-bottom: 63px;
+  }
+
+  .production__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    padding-bottom: 46px;
+    border: none;
+  }
+
+  .production__video {
+    width: 100%;
+    min-height: 455px;
+    order: -1;
+    background-color: black;
+  }
+
+  .production__title {
+    padding-top: 38px;
+    padding-left: 106px;
+    padding-bottom: 31px;
+    margin: 0;
+    font-size: 20px;
+    border: 1px solid $border-color;
+    border-bottom: none;
+
+    &::before {
+      left: 42px;
+      top: 33px;
+    }
+  }
+
+  .production__text {
+    padding-top: 0;
+    padding-right: 42px;
+    padding-left: 42px;
+    padding-bottom: 35px;
+    font-size: 15px;
+    line-height: 30px;
+    border: 1px solid $border-color;
+    border-top: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .production {
+    margin-bottom: 105px;
+    min-height: 455px;
+  }
+
+  .production__wrapper {
+    min-height: 457px;
+    padding: 0;
+    padding-right: 57px;
+    border: 1px solid $border-color;
+  }
+
+  .production__video {
+    position: absolute;
+    width: 682px;
+    min-height: 455px;
+    margin: 0;
+    border: none;
+  }
+
+  .production__title {
+    margin-left: 760px;
+    margin-top: 90px;
+    padding-top: 0;
+    padding-left: 0;
+    border: none;
+
+    &::before {
+      left: 0;
+      top: -48px;
+    }
+  }
+
+  .production__text {
+    margin-left: 760px;
+    padding: 0;
+    border: none;
+  }
+
+  .production__description {
+    margin-bottom: 50px;
+  }
 }

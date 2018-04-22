@@ -1,6 +1,5 @@
 .categories-list {
   @include ul-reset;
-  width: 320px;
   margin: 0 auto;
 }
 
@@ -21,5 +20,33 @@
 
   &--toys {
     background-color: #56c3b2;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .categories-list {
+    display: flex;
+    width: 768px;
+    padding: 0 50px;
+  }
+
+  .categories-list__item {
+    width: 50%;
+    display: flex;
+  }
+
+  .categories-list__link {
+    width: 100%;
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 36px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .categories-list {
+    width: 1150px;
   }
 }

@@ -3,7 +3,26 @@
   box-sizing: content-box;
   width: 86px;
   height: 35px;
-  margin: 0 auto;
-  padding-top: 22px;
-  padding-bottom: 22px;
+  margin: 22px auto;
+}
+
+@media (min-width: $tablet-width) {
+  .logo-link {
+    width: 112px;
+    height: 46px;
+    margin: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo-link {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    width: 149px;
+    height: 72px;
+    margin-top: 9px;
+    margin-bottom: 7px;
+  }
 }

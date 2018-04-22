@@ -3,6 +3,56 @@
   padding-top: 28px;
   padding-bottom: 28px;
   padding-left: 76px;
+  padding-right: 20px;
   border-top: 1px solid $border-color;
   color: $title-color;
+}
+
+@media (min-width: $tablet-width) {
+  .site-nav {
+    width: 50%;
+    order: 1;
+    background-color: transparent;
+    margin-bottom: -60px;
+  }
+
+  .site-nav__item {
+    width: 167px;
+  }
+
+  .site-nav__link {
+    font-size: 15px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 0;
+    padding-right: 5px;
+    border: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-nav {
+    order: 0;
+    margin: 0;
+  }
+
+  .site-nav__item--catalog {
+    width: 185px;
+  }
+
+  .site-nav__item--form {
+    width: 200px;
+  }
+
+  .site-nav__link {
+    padding-left: 34px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 17px;
+
+    &--catalog {
+      padding-left: 0;
+      border-right: 1px solid $border-color;
+    }
+  }
 }
