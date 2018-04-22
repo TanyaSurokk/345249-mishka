@@ -119,6 +119,10 @@
     margin-bottom: 80px;
   }
 
+  .contacts__item {
+    width: 350px;
+  }
+
   .contacts__title {
     width: 350px;
     font-size: 53px;
@@ -133,6 +137,10 @@
   .contacts__info {
     flex-direction: column;
     width: 350px;
+  }
+
+  .contacts__data--address {
+    padding-right: 0;
   }
 
   .contacts__map {
