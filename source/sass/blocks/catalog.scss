@@ -55,6 +55,10 @@
     padding-top: 67px;
   }
 
+  .catalog__list {
+    width: 100%;
+  }
+
   .catalog__item {
     display: flex;
     margin-bottom: 54px;
@@ -90,6 +94,7 @@
 @media (min-width: $desktop-width) {
   .catalog {
     margin-bottom: 57px;
+    padding-top: 111px;
   }
 
   .catalog__list {
@@ -119,5 +124,9 @@
 
   .catalog__description {
     min-height: 94px;
+  }
+
+  .catalog__details {
+    margin-bottom: 0;
   }
 }

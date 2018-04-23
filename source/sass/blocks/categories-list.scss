@@ -26,8 +26,8 @@
 @media (min-width: $tablet-width) {
   .categories-list {
     display: flex;
-    width: 768px;
-    padding: 0 50px;
+    width: 698px;
+    padding: 0 15px;
   }
 
   .categories-list__item {
@@ -47,6 +47,10 @@
 
 @media (min-width: $desktop-width) {
   .categories-list {
-    width: 1150px;
+    width: 1050px;
+  }
+
+  .categories-list__link {
+    padding-right: 350px;
   }
 }

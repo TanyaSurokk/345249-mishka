@@ -4,9 +4,9 @@
 
 @media (min-width: $tablet-width) {
   .page-header__wrapper {
-    width: 768px;
+    width: 698px;
     margin: 0 auto;
-    padding: 0 50px;
+    padding: 0 15px;
   }
 
   .page-header__delivery {
@@ -24,6 +24,6 @@
 
 @media (min-width: $desktop-width) {
   .page-header__wrapper {
-    width: 1150px;
+    width: 1080px;
   }
 }

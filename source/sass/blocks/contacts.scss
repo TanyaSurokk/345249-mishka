@@ -97,7 +97,8 @@
   }
 
   .contacts__map {
-    width: 768px;
+    width: 100%;
+    max-width: 768px;
     margin-bottom: 55px;
   }
 
@@ -115,7 +116,7 @@
   }
 
   .contacts__container {
-    padding-left: 225px;
+    padding-left: 195px;
     margin-bottom: 80px;
   }
 

@@ -144,6 +144,7 @@
 
     &--phone {
       padding-bottom: 12px;
+      padding-top: 50px;
     }
 
     &--email {
@@ -168,8 +169,8 @@
   .order-form__wrapper {
     display: flex;
     align-items: start;
-    width: 768px;
-    padding: 0 50px;
+    width: 698px;
+    padding: 0 15px;
 
     &--bottom {
       align-items: center;
@@ -258,8 +259,8 @@
 
 @media (min-width: $desktop-width) {
   .order-form__wrapper {
-    width: 1150px;
-    padding: 0 50px;
+    width: 1080px;
+    padding: 0 15px;
 
     &--bottom {
       padding-right: 225px;

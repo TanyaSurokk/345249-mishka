@@ -57,6 +57,9 @@
   }
 
   .reviews__container {
+    width: 100%;
+    max-width: 768px;
+    padding: 0 50px;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -107,7 +110,9 @@
 
 @media (min-width: $desktop-width) {
   .reviews__container {
-    padding-left: 175px;
+    max-width: 1080px;
+    padding-right: 15px;
+    padding-left: 190px;
     padding-top: 70px;
     padding-bottom: 44px;
   }
