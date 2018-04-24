@@ -3,6 +3,10 @@
   padding-bottom: 39px;
 }
 
+.contacts__container {
+  margin-bottom: 40px;
+}
+
 .contacts__title {
   margin: 0;
   margin-bottom: 30px;
@@ -13,10 +17,12 @@
 }
 
 .contacts__info {
-  margin-bottom: 40px;
-  border-collapse: collapse;
   font-size: 15px;
   line-height: 30px;
+}
+
+.contacts__item {
+  display: flex;
 }
 
 .contacts__link {
@@ -26,16 +32,20 @@
 }
 
 .contacts__type {
-  vertical-align: top;
+  min-width: 77px;
 }
 
 .contacts__data {
-  padding-left: 17px;
-  vertical-align: top;
-}
+  margin: 0;
+  min-width: 183px;
 
-.contacts__data--email {
-  padding-bottom: 25px;
+  &--address {
+    padding-right: 42px;
+  }
+
+  &--email {
+    padding-bottom: 30px;
+  }
 }
 
 .contacts__map {
@@ -43,4 +53,107 @@
   width: 320px;
   margin: 0 auto;
   margin-bottom: 39px;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts {
+    padding-top: 65px;
+    padding-bottom: 57px;
+  }
+
+  .contacts__container {
+    margin-bottom: 60px;
+  }
+
+  .contacts__title {
+    position: relative;
+    font-size: 43px;
+    line-height: 50px;
+    margin-bottom: 47px;
+
+    &::after {
+      @include pseudo-element;
+      background-image: url("../img/icon-flag.svg");
+      background-repeat: no-repeat;
+      width: 47px;
+      height: 81px;
+      right: 0;
+      top: -15px;
+    }
+  }
+
+  .contacts__info {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 17px;
+  }
+
+  .contacts__item {
+    width: 50%;
+  }
+
+  .contacts__data--address {
+    padding-right: 32px;
+  }
+
+  .contacts__map {
+    width: 100%;
+    max-width: 768px;
+    margin-bottom: 55px;
+  }
+
+  .contacts__write {
+    width: 230px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    position: relative;
+    padding-top: 148px;
+    padding-bottom: 105px;
+  }
+
+  .contacts__container {
+    padding-left: 195px;
+    margin-bottom: 80px;
+  }
+
+  .contacts__item {
+    width: 350px;
+  }
+
+  .contacts__title {
+    width: 350px;
+    font-size: 53px;
+    line-height: 57px;
+
+    &::after {
+      left: -120px;
+      top: -10px;
+    }
+  }
+
+  .contacts__info {
+    flex-direction: column;
+    width: 350px;
+  }
+
+  .contacts__data--address {
+    padding-right: 0;
+  }
+
+  .contacts__map {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 525px;
+    margin-bottom: 105px;
+  }
+
+  .contacts__write {
+    margin: 0;
+    margin-left: 175px;
+  }
 }

@@ -1,6 +1,5 @@
 .about-us {
   padding-top: 30px;
-  padding-bottom: 30px;
 }
 
 .about-us__title {
@@ -19,8 +18,68 @@
   position: relative;
   margin-bottom: 30px;
   padding-top: 50px;
+}
 
-  &:last-child {
-    margin-bottom: 0;
+@media (min-width: $tablet-width) {
+  .about-us {
+    padding-top: 54px;
+    padding-bottom: 20px;
+  }
+
+  .about-us__title {
+    margin-bottom: 48px;
+  }
+
+  .about-us__advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .about-us__advantage-item {
+    margin-bottom: 60px;
+    width: 300px;
+    margin-right: 33px;
+
+    &--eco {
+      order: 1;
+    }
+
+    &--handmade {
+      order: 2;
+    }
+
+    &--price {
+      order: 3;
+    }
+
+    &--national {
+      order: 4;
+    }
+
+    &--likes {
+      order: 5;
+    }
+
+    &--present {
+      order: 6;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about-us__container {
+    padding-right: 190px;
+    padding-left: 190px;
+  }
+
+  .about-us {
+    padding-top: 65px;
+    padding-bottom: 25px;
+  }
+
+  .about-us__advantage-item {
+    margin-right: 50px;
   }
 }

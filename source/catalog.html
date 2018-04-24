@@ -2,41 +2,49 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <nav class="main-nav">
-        <a class="logo-link" href="index.html">
-          <img class="logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
-        </a>
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть или закрыть меню</span></button>
-        <div class="main-nav__wrapper">
+      <div class="page-header__wrapper">
+        <nav class="main-nav">
+          <a class="logo-link" href="index.html">
+            <img class="logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
+          </a>
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть или закрыть меню</span></button>
           <ul class="main-nav__list site-nav">
-            <li class="site-nav__item site-nav__item--active">
-              <a class="site-nav__link">Каталог товаров</a>
+            <li class="site-nav__item site-nav__item--catalog">
+              <a class="site-nav__link site-nav__link--catalog">Каталог товаров</a>
             </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="form.html">Вязание на заказ</a>
+            <li class="site-nav__item site-nav__item--form">
+              <a class="site-nav__link site-nav__link--form" href="form.html">Вязание на заказ</a>
             </li>
           </ul>
           <ul class="main-nav__list user-list">
-            <li class="user-list__item">
+            <li class="user-list__item user-list__item--search">
               <a class="user-list__link user-list__link--search" href="#">Поиск по сайту</a>
             </li>
-            <li class="user-list__item">
+            <li class="user-list__item user-list__item--basket">
               <a class="user-list__link user-list__link--basket" href="#">Корзина: пока пуста</a>
             </li>
           </ul>
-        </div>
-      </nav>
+          <ul class="main-nav__list extra-menu">
+            <li class="extra-menu__item extra-menu__item--new">
+              <a class="extra-menu__link extra-menu__link--new" href="#">Новые поступления</a>
+            </li>
+            <li class="extra-menu__item extra-menu__item--sale">
+              <a class="extra-menu__link extra-menu__link--sale" href="#">Распродажа</a>
+            </li>
+          </ul>
+        </nav>
+        <span class="page-header__delivery">Бесплатная доставка по России</span>
+      </div>
     </header>
     <main class="page-catalog">
       <div class="intro intro--catalog">
-        <div class="container">
-          <h1 class="intro__title">Каталог товаров</h1>
-        </div>
+        <h1 class="intro__title">Каталог товаров</h1>
       </div>
       <section class="catalog">
         <div class="catalog__container container">
@@ -77,7 +85,7 @@
               </a>
               <div class="catalog__wrapper">
                 <div class="catalog__description">
-                  <a class="catalog__title-link" href="#"><h2 class="catalog__title">Большая корзинка для игрушек</h2></a>
+                  <a class="catalog__title-link" href="#"><h2 class="catalog__title">Большая корзинка для&nbsp;игрушек</h2></a>
                   <p class="catalog__details">Диаметр 30 см, высота 30 см</p>
                 </div>
                 <div class="catalog__add">
@@ -106,6 +114,9 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__container container">
+        <a class="page-footer__logo-link">
+          <img class="page-footer__logo" src="img/footer-logo.svg" width="102" height="34" alt="Логотип магазина Мишка">
+        </a>
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">

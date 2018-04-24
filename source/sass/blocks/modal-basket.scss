@@ -1,7 +1,8 @@
 .modal-basket {
+  display: none;
   width: 320px;
   min-height: 336px;
-  padding-top: 36px;
+  padding-top: 34px;
   padding-right: 30px;
   padding-bottom: 52px;
   padding-left: 30px;
@@ -12,6 +13,7 @@
 }
 
 .modal-basket__title {
+  margin: 0;
   margin-bottom: 7px;
   font-size: 25px;
   line-height: 30px;
@@ -27,6 +29,7 @@
 }
 
 .modal-basket__text {
+  width: 100%;
   margin-bottom: 28px;
   font-size: 15px;
   line-height: 30px;
@@ -36,6 +39,7 @@
 .modal-basket__list {
   @include ul-reset;
   display: flex;
+  justify-content: center;
 }
 
 .modal-basket__item {
@@ -86,4 +90,26 @@
   color: #ffffff;
   border: none;
   cursor: pointer;
+}
+
+@media (min-width: $tablet-width) {
+  .modal-basket {
+    width: 566px;
+    padding-top: 36px;
+    padding-right: 106px;
+    padding-left: 106px;
+    border-left: 1px solid $border-modal;
+    border-right: 1px solid $border-modal;
+  }
+
+  .modal-basket__title {
+    font-size: 30px;
+    line-height: 57px;
+    margin-bottom: 12px;
+  }
+
+  .modal-basket__text {
+    margin-bottom: 26px;
+    font-size: 17px;
+  }
 }

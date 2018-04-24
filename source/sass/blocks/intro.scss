@@ -1,9 +1,8 @@
 .intro {
   background-color: $bg-color;
   padding-top: 75px;
-  padding-left: 30px;
-  padding-right: 30px;
   min-height: 177px;
+  border-top: 1px solid $border-color;
 
   &--catalog {
     color: $title-color;
@@ -20,4 +19,29 @@
   line-height: 30px;
   font-weight: 700;
   text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .intro {
+    position: relative;
+    padding-top: 95px;
+    min-height: 226px;
+    z-index: -1;
+  }
+
+  .intro__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .intro {
+    min-height: 255px;
+  }
+
+  .intro__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
