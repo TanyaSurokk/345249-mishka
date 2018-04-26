@@ -1,9 +1,9 @@
 .about-us {
-  padding-top: 30px;
+  padding-top: 28px;
 }
 
 .about-us__title {
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
 .about-us__advantages-list {
@@ -17,17 +17,56 @@
 .about-us__advantage-item {
   position: relative;
   margin-bottom: 30px;
-  padding-top: 50px;
+  padding-top: 52px;
+
+  &::before {
+    @include pseudo-element;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 40px;
+  }
+
+  &--eco::before {
+    left: 8px;
+    background-image: url("../img/icon-feature-flower.svg");
+  }
+
+  &--price::before {
+    background-image: url("../img/icon-feature-money.svg");
+  }
+
+  &--likes::before {
+    left: 8px;
+    background-image: url("../img/icon-feature-heart.svg");
+  }
+
+  &--handmade::before {
+    left: 4px;
+    background-image: url("../img/icon-feature-ball.svg");
+  }
+
+  &--national::before {
+    left: -6px;
+    background-image: url("../img/icon-feature-rocket.svg");
+  }
+
+  &--present::before {
+    left: 4px;
+    background-image: url("../img/icon-feature-gift.svg");
+  }
 }
 
 @media (min-width: $tablet-width) {
   .about-us {
-    padding-top: 54px;
-    padding-bottom: 20px;
+    padding-top: 64px;
+    padding-bottom: 23px;
   }
 
   .about-us__title {
     margin-bottom: 48px;
+    margin-left: -4px;
   }
 
   .about-us__advantages-list {
@@ -75,8 +114,8 @@
   }
 
   .about-us {
-    padding-top: 65px;
-    padding-bottom: 25px;
+    padding-top: 80px;
+    padding-bottom: 31px;
   }
 
   .about-us__advantage-item {

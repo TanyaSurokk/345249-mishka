@@ -9,7 +9,7 @@
 
 .contacts__title {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
@@ -29,6 +29,14 @@
   padding-bottom: 4px;
   color: $text-color;
   border-bottom: 1px solid $theme-color;
+
+  &:hover {
+    color: $theme-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .contacts__type {
@@ -53,23 +61,34 @@
   width: 320px;
   margin: 0 auto;
   margin-bottom: 39px;
+
+  &::before {
+    @include pseudo-element;
+    top: 145px;
+    left: 139px;
+    width: 66px;
+    height: 100.801px;
+    background-image: url("../img/icon-map-pin.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .contacts {
-    padding-top: 65px;
+    padding-top: 75px;
     padding-bottom: 57px;
   }
 
   .contacts__container {
-    margin-bottom: 60px;
+    margin-bottom: 56px;
   }
 
   .contacts__title {
     position: relative;
     font-size: 43px;
     line-height: 50px;
-    margin-bottom: 47px;
+    margin-bottom: 49px;
+    margin-left: -4px;
 
     &::after {
       @include pseudo-element;
@@ -111,13 +130,13 @@
 @media (min-width: $desktop-width) {
   .contacts {
     position: relative;
-    padding-top: 148px;
-    padding-bottom: 105px;
+    padding-top: 163px;
+    padding-bottom: 108px;
   }
 
   .contacts__container {
     padding-left: 195px;
-    margin-bottom: 80px;
+    margin-bottom: 77px;
   }
 
   .contacts__item {
@@ -128,9 +147,10 @@
     width: 350px;
     font-size: 53px;
     line-height: 57px;
+    margin-left: -10px;
 
     &::after {
-      left: -120px;
+      left: -108px;
       top: -10px;
     }
   }
@@ -150,6 +170,10 @@
     left: 50%;
     width: 525px;
     margin-bottom: 105px;
+  }
+
+  .contacts__info {
+    margin-left: -5px;
   }
 
   .contacts__write {

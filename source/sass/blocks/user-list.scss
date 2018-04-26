@@ -4,8 +4,64 @@
   padding-bottom: 28px;
   padding-left: 76px;
   padding-right: 20px;
-  border-top: 1px solid $border-color;
   color: $title-color;
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.user-list__item {
+  border-top: 1px solid $border-color;
+}
+
+.user-list__link[href]:hover {
+  color: #8d8d8d;
+}
+
+.user-list__link[href]:active {
+  color: #cacaca;
+}
+
+.user-list__icon {
+  &--search {
+    display: block;
+    position: absolute;
+    top: 32px;
+    left: 32px ;
+    fill: #231f20;
+    opacity: 0.2;
+  }
+
+  &--basket {
+    display: block;
+    position: absolute;
+    left: 30px;
+    top: 31px;
+    fill: #231f20;
+    opacity: 0.2;
+  }
+}
+
+.user-list__link--search[href] {
+  &:hover .user-list__icon--search {
+    opacity: 1;
+    fill: $theme-color;
+  }
+
+  &:active .user-list__icon--search {
+    opacity: 0.3;
+  }
+}
+
+.user-list__link--basket[href] {
+  &:hover .user-list__icon--basket {
+    opacity: 1;
+    fill: $theme-color;
+  }
+
+  &:active .user-list__icon--basket {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -14,8 +70,24 @@
   }
 
   .user-list__link {
-    border: none;
     border-left: 1px solid $border-color;
+  }
+
+  .user-list__icon {
+    &--search {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &--basket {
+      top: 35px;
+      left: 31px;
+    }
+  }
+
+  .user-list__item {
+    border-top: none;
   }
 
   .user-list__item--search {
@@ -24,37 +96,10 @@
   }
 
   .user-list__link--search {
-    position: relative;
     width: 100%;
     height: 100%;
     padding: 0;
     font-size: 0;
-
-    &::before {
-      @include pseudo-element;
-      width: 18px;
-      height: 18px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-image: url("../img/icon-search.svg");
-      opacity: 0.2;
-    }
-  }
-
-  .user-list__item--basket {
-    position: relative;
-    width: 266px;
-
-    &::before {
-      @include pseudo-element;
-      width: 21px;
-      height: 18px;
-      top: 35px;
-      left: 31px;
-      background-image: url("../img/icon-cart.svg");
-      opacity: 0.2;
-    }
   }
 
   .user-list__link--basket {
@@ -62,5 +107,6 @@
     padding-right: 0;
     padding-top: 32px;
     padding-bottom: 32px;
+    width: 266px;
   }
 }

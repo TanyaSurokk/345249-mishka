@@ -6,6 +6,14 @@
   margin: 22px auto;
 }
 
+.logo-link[href]:hover {
+  opacity: 0.6;
+}
+
+.logo-link[href]:active {
+  opacity: 0.3;
+}
+
 @media (min-width: $tablet-width) {
   .logo-link {
     width: 112px;

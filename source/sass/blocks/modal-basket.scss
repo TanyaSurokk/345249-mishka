@@ -1,5 +1,10 @@
 .modal-basket {
   display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
   width: 320px;
   min-height: 336px;
   padding-top: 34px;
@@ -10,6 +15,10 @@
   border-bottom: 1px solid $border-modal;
   box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
   background-color: #ffffff;
+}
+
+.modal-basket--show {
+  display: block;
 }
 
 .modal-basket__title {
@@ -75,14 +84,14 @@
     height: 52px;
     border: 2px solid $border-color;
   }
-
-  &:active::before {
-    border-color: $theme-color;
-  }
 }
 
 .modal-basket__item input[type="checkbox"]:checked + label::before {
   border-color: $theme-color;
+}
+
+.modal-basket__label:hover::before {
+  border-color: #c7c7c7;
 }
 
 .modal-basket__button {
@@ -94,10 +103,10 @@
 
 @media (min-width: $tablet-width) {
   .modal-basket {
-    width: 566px;
+    width: 568px;
     padding-top: 36px;
-    padding-right: 106px;
-    padding-left: 106px;
+    padding-right: 105px;
+    padding-left: 105px;
     border-left: 1px solid $border-modal;
     border-right: 1px solid $border-modal;
   }
@@ -111,5 +120,13 @@
   .modal-basket__text {
     margin-bottom: 26px;
     font-size: 17px;
+  }
+
+  .modal-basket__label {
+    width: 112px;
+
+    &::before {
+      width: 112px;
+    }
   }
 }

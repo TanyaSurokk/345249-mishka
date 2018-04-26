@@ -2,18 +2,35 @@
   @include ul-reset;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
 }
 
 .social__link {
-  position: relative;
   display: block;
+
+  &--instagram {
+    height: 21.334px;
+  }
+
+  &--facebook {
+    height: 27.718px;
+  }
+
+  &--twitter {
+    height: 20.168px;
+  }
+
+  &:hover path {
+    fill: #46c1ae;
+  }
+
+  &:active path {
+    opacity: 0.3;
+  }
 }
 
 .social__item {
-  background-color: black;
-  width: 22px;
-  height: 22px;
   margin-right: 40px;
 
   &:last-child {
