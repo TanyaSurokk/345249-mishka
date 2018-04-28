@@ -4,7 +4,7 @@
 }
 
 .contacts__container {
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 }
 
 .contacts__title {
@@ -60,7 +60,7 @@
   position: relative;
   width: 320px;
   margin: 0 auto;
-  margin-bottom: 39px;
+  margin-bottom: 37px;
 
   &::before {
     @include pseudo-element;
@@ -71,11 +71,25 @@
     background-image: url("../img/icon-map-pin.svg");
     background-repeat: no-repeat;
   }
+
+  .contacts__map-image {
+    min-height: 457px;
+  }
+}
+
+.contacts__map iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  z-index: 10;
 }
 
 @media (min-width: $tablet-width) {
   .contacts {
-    padding-top: 75px;
+    padding-top: 63px;
     padding-bottom: 57px;
   }
 
@@ -119,6 +133,11 @@
     width: 100%;
     max-width: 768px;
     margin-bottom: 55px;
+
+    &::before {
+      top: 139px;
+      left: 363px;
+    }
   }
 
   .contacts__write {
@@ -130,13 +149,13 @@
 @media (min-width: $desktop-width) {
   .contacts {
     position: relative;
-    padding-top: 163px;
-    padding-bottom: 108px;
+    padding-top: 142px;
+    padding-bottom: 106px;
   }
 
   .contacts__container {
     padding-left: 195px;
-    margin-bottom: 77px;
+    margin-bottom: 76px;
   }
 
   .contacts__item {
@@ -171,6 +190,11 @@
     left: 50%;
     width: 525px;
     margin-bottom: 105px;
+
+    &::before {
+      top: 146px;
+      left: 239px;
+    }
   }
 
   .contacts__write {

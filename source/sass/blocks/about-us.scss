@@ -17,7 +17,7 @@
 .about-us__advantage-item {
   position: relative;
   margin-bottom: 30px;
-  padding-top: 52px;
+  padding-top: 53px;
 
   &::before {
     @include pseudo-element;
@@ -60,8 +60,8 @@
 
 @media (min-width: $tablet-width) {
   .about-us {
-    padding-top: 64px;
-    padding-bottom: 23px;
+    padding-top: 49px;
+    padding-bottom: 22px;
   }
 
   .about-us__title {
@@ -114,8 +114,8 @@
   }
 
   .about-us {
-    padding-top: 80px;
-    padding-bottom: 31px;
+    padding-top: 59px;
+    padding-bottom: 29px;
   }
 
   .about-us__advantage-item {
