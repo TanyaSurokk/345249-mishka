@@ -3,13 +3,18 @@
   background-color: $bg-color-index;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center -15px;
+  background-position: center -17px;
   border-top: 1px solid $border-color;
+  background-size: 575px auto;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/hero-mobile@2x.jpg");
+  }
 }
 
 .shop-description__intro {
   min-height: 283px;
-  padding-top: 75px;
+  padding-top: 70px;
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -24,9 +29,31 @@
 }
 
 @media (min-width: $tablet-width) {
+  .shop-description {
+    position: relative;
+    z-index: -1;
+    background-size: 1150px auto;
+    background-position: center 0;
+    background-image: url("../img/hero-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/hero-tablet@2x.jpg");
+    }
+
+    &::after {
+      @include pseudo-element;
+      bottom: -12px;
+      left: 0;
+      width: 100%;
+      height: 22px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: contain;
+    }
+  }
+
   .shop-description__intro {
     padding-top: 154px;
-    min-height: 628px;
+    min-height: 626px;
   }
 
   .shop-description__intro-title {
@@ -36,6 +63,11 @@
 }
 
 @media (min-width: $desktop-width) {
+  .shop-description::after {
+    height: 34px;
+    bottom: -19px;
+  }
+
   .shop-description__intro-title {
     font-size: 53px;
     line-height: 57px;

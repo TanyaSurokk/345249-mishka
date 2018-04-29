@@ -1,16 +1,29 @@
 .logo-link {
   display: block;
-  box-sizing: content-box;
+  margin: 22px auto;
+}
+
+.logo-link__image {
   width: 86px;
   height: 35px;
-  margin: 22px auto;
+}
+
+.logo-link[href]:hover .logo-link__image {
+  opacity: 0.6;
+}
+
+.logo-link[href]:active .logo-link__image {
+  opacity: 0.3;
 }
 
 @media (min-width: $tablet-width) {
   .logo-link {
+    margin: 0;
+  }
+
+  .logo-link__image {
     width: 112px;
     height: 46px;
-    margin: 0;
   }
 }
 
@@ -20,9 +33,12 @@
     left: 50%;
     top: 0;
     transform: translate(-50%, 0);
-    width: 149px;
-    height: 72px;
     margin-top: 9px;
     margin-bottom: 7px;
+  }
+
+  .logo-link__image {
+    width: 149px;
+    height: 72px;
   }
 }

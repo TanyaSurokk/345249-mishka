@@ -26,11 +26,19 @@
     background-color: transparent;
 
     &--sale {
-      padding-left: 45px;
+      padding-left: 35px;
     }
 
     &--new {
       padding-right: 26px;
     }
+  }
+
+  .extra-menu__link[href]:hover {
+    color: #8d8d8d;
+  }
+
+  .extra-menu__link[href]:active {
+    color: #cacaca;
   }
 }

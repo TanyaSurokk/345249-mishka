@@ -6,7 +6,7 @@
 
 .order-form__fieldset {
   @include fieldset-reset;
-  padding-bottom: 33px;
+  padding-bottom: 40px;
 
   &--extra {
     padding-bottom: 15px;
@@ -23,7 +23,7 @@
   display: flex;
   align-items: center;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 34px;
   font-size: 17px;
   line-height: 17px;
   font-weight: 700;
@@ -57,6 +57,10 @@
     padding-bottom: 0;
   }
 
+  &--checkbox {
+    padding-bottom: 40px;
+  }
+
   &--radio,
   &--checkbox {
     display: flex;
@@ -80,9 +84,49 @@
     display: block;
     margin-bottom: 10px;
   }
+
+  &--radio::before {
+    @include pseudo-element;
+    top: -7px;
+    left: 0;
+    width: 38px;
+    height: 38px;
+    border: 2px solid $button-border-color;
+    border-radius: 50%;
+  }
+
+  &--radio:hover::before {
+    border-color: $theme-color;
+  }
+
+  &--radio:active::before {
+    border-color: rgba(68, 68, 68, 0.3);
+  }
+
+  &--checkbox::before {
+    @include pseudo-element;
+    top: -11px;
+    left: 0;
+    width: 40px;
+    height: 39px;
+    border: 2px solid $button-border-color;
+  }
+
+  &--checkbox:hover::before {
+    border-color: $theme-color;
+  }
+
+  &--checkbox:active::before {
+    border-color: rgba(68, 68, 68, 0.3);
+  }
 }
 
 .order-form__input {
+  &--radio,
+  &--checkbox {
+    display: none;
+  }
+
   &--text {
     width: 100%;
     padding-top: 17px;
@@ -109,6 +153,62 @@
   &--extra::placeholder {
     color: rgba(68, 68, 68, 0.3);
   }
+
+  &--radio:checked + label::after {
+    @include pseudo-element;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: 4px;
+    left: 12px;
+    background-color: $theme-color;
+  }
+
+  &--checkbox:checked + label::after {
+    @include pseudo-element;
+    left: 9px;
+    top: -2px;
+    width: 32.666px;
+    height: 22.742px;
+    background-image: url("../img/icon-tick.svg");
+    background-size: 22px 22px;
+    background-repeat: no-repeat;
+  }
+
+  &--text:hover {
+    border-color: $theme-color;
+  }
+
+  &--text:focus {
+    border-color: $theme-color;
+    outline: none;
+  }
+
+  &--extra:hover {
+    border-color: $theme-color;
+  }
+
+  &:focus {
+    border-color: $theme-color;
+    outline: none;
+  }
+}
+
+.order-form__item--email,
+.order-form__item--phone {
+  position: relative;
+}
+
+.order-form__icon {
+  @include pseudo-element;
+  top: 12px;
+  right: 5px;
+  fill: #cccccc;
+}
+
+.order-form__input--text:hover + .order-form__icon,
+.order-form__input--text:focus + .order-form__icon {
+  fill: $theme-color;
 }
 
 .order-form__comment {
@@ -199,6 +299,11 @@
     width: 501px;
     padding-bottom: 40px;
 
+    &--checkbox,
+    &--radio {
+      padding-bottom: 56px;
+    }
+
     &--checkbox {
       width: 250px;
     }
@@ -223,6 +328,18 @@
 
     &--text {
       margin-right: 25px;
+    }
+
+    &--radio::before {
+      width: 51px;
+      height: 51px;
+      top: -15px;
+    }
+
+    &--checkbox::before {
+      width: 54px;
+      height: 52px;
+      top: -15px;
     }
   }
 
@@ -253,6 +370,19 @@
     &--text::placeholder,
     &--extra::placeholder {
       font-size: 19px;
+    }
+
+    &--radio:checked + label::after {
+      width: 20px;
+      height: 20px;
+      top: 0;
+      left: 16px;
+    }
+
+    &--checkbox:checked + label::after {
+      background-size: 33px 22px;
+      left: 12px;
+      top: 1px;
     }
   }
 }

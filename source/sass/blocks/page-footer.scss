@@ -43,7 +43,14 @@
     display: block;
     width: 102px;
     height: 34px;
-    background-color: black;
+  }
+
+  .page-footer__logo-link[href]:hover .page-footer__logo {
+    fill: $footer-hover-fill;
+  }
+
+  .page-footer__logo-link[href]:active .page-footer__logo {
+    opacity: 0.3;
   }
 
   .page-footer__copyright {
