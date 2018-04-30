@@ -3,7 +3,8 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: -168px;
+  margin-left: -160px;
   z-index: 20;
   width: 320px;
   min-height: 336px;
@@ -19,6 +20,30 @@
 
 .modal-basket--show {
   display: block;
+}
+
+.modal-basket--error {
+  animation: shake 0.6s;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+        transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+        transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+        transform: translateX(10px);
+  }
 }
 
 .modal-basket__title {
@@ -104,6 +129,7 @@
 @media (min-width: $tablet-width) {
   .modal-basket {
     width: 568px;
+    margin-left: -284px;
     padding-top: 36px;
     padding-right: 105px;
     padding-left: 105px;
