@@ -10,6 +10,8 @@
 
 @media (min-width: $desktop-width) {
   .extra-menu {
+    position: relative;
+    z-index: 1;
     display: flex;
     margin-bottom: -60px;
     font-size: 15px;

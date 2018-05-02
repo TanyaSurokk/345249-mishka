@@ -11,6 +11,8 @@
 
   .page-header__delivery {
     display: block;
+    position: relative;
+    z-index: 1;
     width: 50%;
     padding-top: 18px;
     padding-bottom: 18px;

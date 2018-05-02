@@ -1,6 +1,6 @@
 .intro {
   background-color: $bg-color;
-  padding-top: 75px;
+  padding-top: 70px;
   min-height: 177px;
   border-top: 1px solid $border-color;
 
@@ -27,6 +27,16 @@
     padding-top: 95px;
     min-height: 226px;
     z-index: -1;
+
+    &::after {
+      @include pseudo-element;
+      bottom: -12px;
+      left: 0;
+      width: 100%;
+      height: 24px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: contain;
+    }
   }
 
   .intro__title {
@@ -38,6 +48,12 @@
 @media (min-width: $desktop-width) {
   .intro {
     min-height: 255px;
+    padding-top: 93px;
+
+    &::after {
+      height: 34px;
+      bottom: -16px;
+    }
   }
 
   .intro__title {
