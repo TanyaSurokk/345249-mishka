@@ -43,6 +43,8 @@ var overlay = document.querySelector(".modal-overlay");
     }
   });
 
+  // Если не выбран ни один чекбокс (2 варианта):
+
 //   var size_s = modal_basket.querySelector("[name=size-s]");
 //   var size_m = modal_basket.querySelector("[name=size-m]");
 //   var size_l = modal_basket.querySelector("[name=size-l]");
@@ -59,17 +61,40 @@ var overlay = document.querySelector(".modal-overlay");
 var checkbox = modal_basket.querySelectorAll(".modal-basket__option");
 var checked = false;
 
+modal_basket.addEventListener("submit", function (evt) {
 for (var i = 0; i < checkbox.length; i++) {
   if (checkbox[i].checked) {
     checked = true;
+    //console.log(checkbox[i]checked);
     }
   }
-
-modal_basket.addEventListener("submit", function (evt) {
+console.log(checked)
   if (checked === false) {
     evt.preventDefault();
     modal_basket.classList.remove("modal-basket--error");
     modal_basket.offsetWidth = modal_basket.offsetWidth;
     modal_basket.classList.add("modal-basket--error");
+    console.log("Тряска");
   }
 });
+
+// Карта с кастомным маркером
+
+function initMap() {
+  var uluru = {lat: 59.9388, lng: 30.3230};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 17,
+    center: uluru
+  });
+  var image = {
+      url: "img/icon-map-pin.svg",
+      scaledSize: new google.maps.Size(100, 100)
+    }
+
+  var marker = new google.maps.Marker({
+    position: uluru,
+    map: map,
+    optimized: false,
+    icon: image
+  });
+}

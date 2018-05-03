@@ -8,6 +8,7 @@
 
 .social__link {
   display: block;
+  fill: #231f20;
 
   &--instagram {
     height: 21.334px;
@@ -21,11 +22,11 @@
     height: 20.168px;
   }
 
-  &:hover path {
+  &:hover {
     fill: $footer-hover-fill;
   }
 
-  &:active path {
+  &:active {
     opacity: 0.3;
   }
 }
