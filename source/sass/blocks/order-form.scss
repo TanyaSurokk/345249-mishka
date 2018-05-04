@@ -6,7 +6,7 @@
 
 .order-form__fieldset {
   @include fieldset-reset;
-  padding-bottom: 43px;
+  padding-bottom: 33px;
 
   &--bio {
     padding-bottom: 30px;
@@ -35,7 +35,7 @@
   display: flex;
   align-items: center;
   margin: 0;
-  margin-bottom: 34px;
+  margin-bottom: 24px;
   font-size: 17px;
   line-height: 17px;
   font-weight: 700;
@@ -78,7 +78,11 @@
   }
 
   &--checkbox {
-    padding-bottom: 43px;
+    padding-bottom: 23px;
+  }
+
+  &--radio {
+    padding-bottom: 4px;
   }
 
   &--radio,
@@ -108,6 +112,8 @@
     position: relative;
     padding-left: 62px;
     cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   &--text {
@@ -119,7 +125,7 @@
 
   &--radio::before {
     @include pseudo-element;
-    top: -9px;
+    top: 0;
     left: 1px;
     width: 38px;
     height: 38px;
@@ -137,7 +143,7 @@
 
   &--checkbox::before {
     @include pseudo-element;
-    top: -11px;
+    top: 0;
     left: 0;
     width: 40px;
     height: 39px;
@@ -191,7 +197,7 @@
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    top: 2px;
+    top: 12px;
     left: 13px;
     background-color: $theme-color;
   }
@@ -199,7 +205,7 @@
   &--checkbox:checked + label::after {
     @include pseudo-element;
     left: 9px;
-    top: -2px;
+    top: 10px;
     width: 32.666px;
     height: 22.742px;
     background-image: url("../img/icon-tick.svg");
@@ -261,11 +267,12 @@
   }
 
   .order-form__fieldset {
-    padding-bottom: 69px;
-    padding-top: 65px;
+    padding-bottom: 52px;
+    padding-top: 47px;
 
     &--extra {
       padding-bottom: 53px;
+      padding-top: 65px;
     }
 
     &--phone,
@@ -286,6 +293,7 @@
 
     &--bio {
       padding-bottom: 52px;
+      padding-top: 65px;
     }
 
     &--bio .order-form__list {
@@ -313,6 +321,11 @@
     margin: 0;
     width: 167px;
 
+    &--type,
+    &--color {
+      margin-top: 18px;
+    }
+
     &::after {
       display: none;
     }
@@ -332,11 +345,11 @@
     padding-bottom: 40px;
 
     &--radio {
-      padding-bottom: 56px;
+      padding-bottom: 24px;
     }
 
     &--checkbox {
-      padding-bottom: 58px;
+      padding-bottom: 24px;
     }
 
     &--checkbox:nth-child(2n) {
@@ -360,6 +373,10 @@
     &--phone {
       margin-top: -3px;
     }
+
+    &--extra {
+      margin-top: -15px;
+    }
   }
 
   .order-form__label {
@@ -368,6 +385,8 @@
     &--radio,
     &--checkbox {
       padding-left: 80px;
+      padding-top: 17px;
+      padding-bottom: 17px;
     }
 
     &--text {
@@ -377,13 +396,11 @@
     &--radio::before {
       width: 51px;
       height: 51px;
-      top: -15px;
     }
 
     &--checkbox::before {
       width: 54px;
       height: 52px;
-      top: -15px;
     }
   }
 
@@ -412,10 +429,6 @@
       background-color: transparent;
     }
 
-    &--extra {
-      margin-top: -15px;
-    }
-
     &--text::placeholder,
     &--extra::placeholder {
       font-size: 19px;
@@ -424,14 +437,14 @@
     &--radio:checked + label::after {
       width: 20px;
       height: 20px;
-      top: 1px;
+      top: 16px;
       left: 17px;
     }
 
     &--checkbox:checked + label::after {
       background-size: 33px 22px;
       left: 12px;
-      top: 1px;
+      top: 16px;
     }
   }
 }
