@@ -88,7 +88,7 @@ function initMap() {
   });
   var image = {
       url: "img/icon-map-pin.svg",
-      scaledSize: new google.maps.Size(100, 100)
+      scaledSize: new google.maps.Size(66, 100)
     }
 
   var marker = new google.maps.Marker({
