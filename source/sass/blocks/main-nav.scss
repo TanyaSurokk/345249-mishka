@@ -67,34 +67,15 @@
   }
 
   .main-nav--opened .site-nav {
-    position: absolute;
-    left: 0;
-    top: 79px;
-    width: 100%;
     background-color: #ffffff;
-    z-index: 6;
   }
 
   .main-nav--opened .user-list {
-    position: absolute;
-    left: 0;
-    top: 241px;
-    width: 100%;
     background-color: #ffffff;
-    border-bottom: 1px solid $border-color;
-    z-index: 5;
   }
 
   .main-nav--nojs .main-nav__toggle {
     display: none;
-  }
-
-  .main-nav--nojs .site-nav {
-    position: static;
-  }
-
-  .main-nav--nojs .user-list {
-    position: static;
   }
 
   .main-nav--nojs .site-nav__item {

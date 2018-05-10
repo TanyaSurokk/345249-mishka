@@ -80,15 +80,57 @@ console.log(checked)
 
 // Карта с кастомным маркером
 
+// function initMap() {
+//   var uluru = {lat: 59.9388, lng: 30.3230};
+//   var map = new google.maps.Map(document.getElementById("map"), {
+//     zoom: 17,
+//     center: uluru
+//   });
+//   var image = {
+//       url: "img/icon-map-pin.svg",
+//       scaledSize: new google.maps.Size(66, 100)
+//     }
+
+//   var marker = new google.maps.Marker({
+//     position: uluru,
+//     map: map,
+//     optimized: false,
+//     icon: image
+//   });
+// }
+
+/*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on http://goo.gl/REQGQ by Paul Irish). Licensed MIT */
+(function( w ){
+    var loadJS = function( src, cb ){
+        "use strict";
+        var ref = w.document.getElementsByTagName( "script" )[ 0 ];
+        var script = w.document.createElement( "script" );
+        script.src = src;
+        script.async = true;
+        ref.parentNode.insertBefore( script, ref );
+        if (cb && typeof(cb) === "function") {
+            script.onload = cb;
+        }
+        return script;
+    };
+    // commonjs
+    if( typeof module !== "undefined" ){
+        module.exports = loadJS;
+    }
+    else {
+        w.loadJS = loadJS;
+    }
+}( typeof global !== "undefined" ? global : this ));
+
 function initMap() {
   var uluru = {lat: 59.9388, lng: 30.3230};
-  var map = new google.maps.Map(document.getElementById('map'), {
+  var map = new google.maps.Map(document.getElementById("map"), {
     zoom: 17,
     center: uluru
   });
   var image = {
       url: "img/icon-map-pin.svg",
-      scaledSize: new google.maps.Size(100, 100)
+      scaledSize: new google.maps.Size(66, 100)
     }
 
   var marker = new google.maps.Marker({
@@ -98,3 +140,30 @@ function initMap() {
     icon: image
   });
 }
+
+function google_maps_lazyload(api_key) {
+  "use strict"
+
+  if (api_key) {
+    var options = {
+      rootMargin: "400px",
+      threshold: 0
+    }
+
+    var observer = new IntersectionObserver(
+      function(entries, observer) {
+        // Detect intersection https://calendar.perfplanet.com/2017/progressive-image-loading-using-intersection-observer-and-sqip/#comment-102838
+        var isIntersecting = typeof entries[0].isIntersecting === "boolean" ? entries[0].isIntersecting : entries[0].intersectionRatio > 0
+        if (isIntersecting) {
+          loadJS("https://maps.googleapis.com/maps/api/js?callback=initMap&key=" + api_key )
+          observer.unobserve(map)
+        }
+      },
+      options
+    )
+
+    observer.observe(map)
+  }
+}
+
+google_maps_lazyload("AIzaSyCTr3GqVFT6qu6fDAvhrXkcmooBCB110NU")
