@@ -160,11 +160,6 @@
 }
 
 .order-form__input {
-  &--radio,
-  &--checkbox {
-    display: none;
-  }
-
   &--text {
     width: 100%;
     padding-top: 17px;
@@ -213,6 +208,22 @@
     background-repeat: no-repeat;
   }
 
+  &--radio:disabled + label {
+    opacity: 0.3;
+  }
+
+  &--radio:disabled + label::before {
+    opacity: 0.4;
+  }
+
+  &--checkbox:disabled + label {
+    opacity: 0.3;
+  }
+
+  &--checkbox:disabled + label::before {
+    opacity: 0.4;
+  }
+
   &--text:hover {
     border-color: $theme-color;
   }
@@ -229,6 +240,14 @@
   &:focus {
     border-color: $theme-color;
     outline: none;
+  }
+
+  &--checkbox:focus + label::before {
+    outline: 2px solid $theme-color;
+  }
+
+  &--radio:focus + label::before {
+    outline: 2px solid $theme-color;
   }
 }
 

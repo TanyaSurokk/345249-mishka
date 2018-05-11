@@ -86,16 +86,6 @@
   z-index: 10;
 }
 
-.contacts__map iframe {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  z-index: 10;
-}
-
 @media (min-width: $tablet-width) {
   .contacts {
     padding-top: 63px;
