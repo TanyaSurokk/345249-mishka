@@ -3,6 +3,7 @@ var nav_toggle = document.querySelector(".main-nav__toggle");
 var modal_basket = document.querySelector(".modal-basket");
 var open_modal_btn = document.querySelectorAll(".js-open-modal-btn");
 var overlay = document.querySelector(".modal-overlay");
+var size_s = modal_basket.querySelector("[name=size-s]");
 
   main_nav.classList.remove("main-nav--nojs");
 
@@ -21,6 +22,7 @@ var overlay = document.querySelector(".modal-overlay");
     evt.preventDefault();
     modal_basket.classList.add("modal-basket--show");
     overlay.classList.add("modal-overlay--show");
+    size_s.focus();
   });
 }
 
