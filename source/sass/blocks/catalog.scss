@@ -147,7 +147,7 @@
 
 @media (min-width: $desktop-width) {
   .catalog {
-    margin-bottom: 57px;
+    margin-bottom: 27px;
     padding-top: 128px;
   }
 
@@ -166,6 +166,7 @@
     flex-direction: column;
     margin: 0;
     margin-right: 51px;
+    margin-bottom: 30px;
 
     &:nth-child(3n) {
       margin-right: 0;

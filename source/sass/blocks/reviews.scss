@@ -6,13 +6,14 @@
   &::after {
     @include pseudo-element;
     bottom: 0;
+    left: 50%;
+    margin-left: -160px;
     width: 100%;
     max-width: 320px;
     height: 6px;
     background-image: url("../img/bg-zigzag-line.svg");
     background-size: 320px 6px;
-    left: 50%;
-    transform: translate(-50%, 0) rotate(180deg);
+    transform: rotate(180deg);
   }
 }
 
@@ -89,6 +90,7 @@
       height: 15px;
       max-width: 768px;
       background-size: 768px 15px;
+      margin-left: -384px;
     }
   }
 
@@ -163,6 +165,7 @@
       height: 23px;
       max-width: 1050px;
       background-size: 1050px 23px;
+      margin-left: -525px;
     }
   }
 

@@ -97,27 +97,19 @@
   line-height: 17px;
   font-weight: 700;
   text-align: center;
+  border: 2px solid $border-color;
   cursor: pointer;
-
-  &::before {
-    @include pseudo-element;
-    top: 0;
-    right: 0;
-    width: 82px;
-    height: 52px;
-    border: 2px solid $border-color;
-  }
 }
 
-.modal-basket__item input[type="checkbox"]:checked + label::before {
+.modal-basket__item input[type="checkbox"]:checked + label {
   border-color: $theme-color;
 }
 
-.modal-basket__item input[type="checkbox"]:focus + label::before {
+.modal-basket__item input[type="checkbox"]:focus + label {
   outline: 2px solid gray;
 }
 
-.modal-basket__label:hover::before {
+.modal-basket__label:hover {
   border-color: #c7c7c7;
 }
 

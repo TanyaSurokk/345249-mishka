@@ -23,43 +23,29 @@
 }
 
 .user-list__icon {
+  display: block;
+  position: absolute;
+  fill: #231f20;
+  opacity: 0.2;
+
   &--search {
-    display: block;
-    position: absolute;
     top: 32px;
     left: 32px;
-    fill: #231f20;
-    opacity: 0.2;
   }
 
   &--basket {
-    display: block;
-    position: absolute;
     left: 30px;
     top: 31px;
-    fill: #231f20;
-    opacity: 0.2;
   }
 }
 
-.user-list__link--search[href] {
-  &:hover .user-list__icon--search {
+.user-list__link[href] {
+  &:hover .user-list__icon {
     opacity: 1;
     fill: $theme-color;
   }
 
-  &:active .user-list__icon--search {
-    opacity: 0.3;
-  }
-}
-
-.user-list__link--basket[href] {
-  &:hover .user-list__icon--basket {
-    opacity: 1;
-    fill: $theme-color;
-  }
-
-  &:active .user-list__icon--basket {
+  &:active .user-list__icon {
     opacity: 0.3;
   }
 }
